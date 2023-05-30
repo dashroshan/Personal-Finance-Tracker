@@ -37,6 +37,18 @@ async function parseJsonFile(file) {
     })
 }
 
+function dateToString(date) {
+    let [y, m, d] = date.split("-");
+    y = parseInt(y, 10);
+    m = parseInt(m, 10);
+    d = parseInt(d, 10);
+
+    const months = [0, "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    m = months[m]
+    const dStr = `${d} ${m} ${y}`;
+    return dStr;
+}
+
 function randomString(len) {
     charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var randomString = '';
@@ -166,7 +178,7 @@ const dataUpdated = () => {
         const nameNonEdit = item.name;
 
         const dateEdit = `<input id="itemValDate${item.id}" type="date" value="${item.date}" />`;
-        const dateNonEdit = "30 May 2023";
+        const dateNonEdit = dateToString(item.date);
 
         const editSaveBtn = item.editMode ? `updateItem('${item.id}')` : `openEditMode('${item.id}')`;
 
