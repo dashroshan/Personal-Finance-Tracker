@@ -53,11 +53,7 @@
             <div id="btnsIconWrap">
                 <div class="buttonIcon" id="saveRemainingBudgetBtn">
                     <img src="./assets/save.svg">
-                    <span>Save</span>
-                </div>
-                <div class="buttonIcon" id="resetAllBtn">
-                    <img src="./assets/reset.svg">
-                    <span>Reset all</span>
+                    <span>Update</span>
                 </div>
             </div>
         </div>
@@ -109,7 +105,21 @@
         </table>
     </div>
 
-    <div id="footer">Made with 💙 using GitHub Copilot</div>
+    <div id="footerBtnsWrap">
+        <input id="loadBackupUpload" type='file' hidden accept=".json" />
+        <div class="buttonIcon" id="loadBackupBtn">
+            <img src="./assets/load.svg">
+            <span>Load backup</span>
+        </div>
+        <div class="buttonIcon" id="backupDataBtn">
+            <img src="./assets/save.svg">
+            <span>Backup data</span>
+        </div>
+        <div class="buttonIcon" id="resetAllBtn">
+            <img src="./assets/reset.svg">
+            <span>Reset all</span>
+        </div>
+    </div>
 </body>
 
 </html>

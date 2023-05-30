@@ -339,3 +339,11 @@ input {
 #setExpenseError {
     display: none;
 }
+
+#footerBtnsWrap {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}

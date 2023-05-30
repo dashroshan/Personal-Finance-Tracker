@@ -14,6 +14,28 @@ const addExpenseCost = document.getElementById("addExpenseCost");
 addExpenseDate.valueAsNumber = Date.now() - (new Date()).getTimezoneOffset() * 60000;
 
 const resetAllBtn = document.getElementById("resetAllBtn");
+const backupDataBtn = document.getElementById("backupDataBtn");
+const loadBackupBtn = document.getElementById("loadBackupBtn");
+const loadBackupUpload = document.getElementById("loadBackupUpload");
+
+function downloadObjectAsJson(exportObj, exportName) {
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+    var downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
+    downloadAnchorNode.setAttribute("download", exportName + ".json");
+    document.body.appendChild(downloadAnchorNode);
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+}
+
+async function parseJsonFile(file) {
+    return new Promise((resolve, reject) => {
+        const fileReader = new FileReader()
+        fileReader.onload = event => resolve(JSON.parse(event.target.result))
+        fileReader.onerror = error => reject(error)
+        fileReader.readAsText(file)
+    })
+}
 
 function randomString(len) {
     charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -47,6 +69,20 @@ resetAllBtn.addEventListener("click", () => {
     };
     dataUpdated();
 })
+
+backupDataBtn.addEventListener("click", () => {
+    downloadObjectAsJson(data, "Personal Finance Tracker - Backup");
+})
+
+loadBackupBtn.addEventListener("click", () => {
+    loadBackupUpload.click();
+})
+
+loadBackupUpload.onchange = async (e) => {
+    const file = e.target.files[0];
+    data = await parseJsonFile(file);
+    dataUpdated();
+}
 
 addExpenseBtn.addEventListener("click", () => {
     const itemData = {
