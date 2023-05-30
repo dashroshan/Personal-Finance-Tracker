@@ -31,12 +31,12 @@
             <div id="headerCardWrap">
                 <div class="headerCard">
                     <div><img src="./assets/expenditure.svg"> Total expenses</div>
-                    <div>10000 Rs</div>
+                    <div id="totalExpenses">0 Rs</div>
                 </div>
 
                 <div class="headerCard">
                     <div><img src="./assets/budget.svg"> Remaining budget</div>
-                    <div>5000 Rs</div>
+                    <div id="remainingBudget">0 Rs</div>
                 </div>
             </div>
         </div>
@@ -46,15 +46,15 @@
         <div id="setBudget">
             <div>Set remaining budget</div>
             <div class="inputWrap">
-                <input type="text" placeholder="0000000">
+                <input id="remainingBudgetInput" type="text" placeholder="0000000">
                 <div>Cost</div>
             </div>
             <div id="btnsIconWrap">
-                <div class="buttonIcon">
+                <div class="buttonIcon" id="saveRemainingBudgetBtn">
                     <img src="./assets/save.svg">
                     <span>Save</span>
                 </div>
-                <div class="buttonIcon">
+                <div class="buttonIcon" id="resetAllBtn">
                     <img src="./assets/reset.svg">
                     <span>Reset all</span>
                 </div>
@@ -66,18 +66,18 @@
         <div id="addExpense">
             <div>New expense</div>
             <div class="inputWrap left">
-                <input type="text" placeholder="Name of the item you spent on">
+                <input type="text" placeholder="Name of the item you spent on" id="addExpenseName">
                 <div>Title</div>
             </div>
             <div class="inputWrap">
-                <input id="dateInput" type="date" />
+                <input type="date" id="addExpenseDate" />
                 <div>Date</div>
             </div>
             <div class="inputWrap">
-                <input type="text" placeholder="0000000">
+                <input type="text" placeholder="0000000" id="addExpenseCost">
                 <div>Cost</div>
             </div>
-            <div class="buttonIcon">
+            <div class="buttonIcon" id="addExpenseBtn">
                 <img src="./assets/add.svg">
                 <span>Add</span>
             </div>
@@ -102,30 +102,7 @@
                 </tr>
             </thead>
 
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="tableBtns">
-                            <img src="./assets/edit.svg">
-                            <img src="./assets/delete.svg">
-                        </div>
-                    </td>
-                    <td>30 May 2023</td>
-                    <td><b>5000</b></td>
-                    <td>Smart watch</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="tableBtns">
-                            <img src="./assets/edit.svg">
-                            <img src="./assets/delete.svg">
-                        </div>
-                    </td>
-                    <td>30 May 2023</td>
-                    <td><b>50000</b></td>
-                    <td>Laptop</td>
-                </tr>
+            <tbody id="listBody">
             </tbody>
         </table>
     </div>

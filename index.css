@@ -257,6 +257,13 @@ input {
     text-align: left;
 }
 
+.expensesList input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .expensesList tbody>tr:nth-of-type(1)>td {
     padding-top: 1.6rem;
 }
@@ -270,8 +277,16 @@ input {
     border-bottom: 0.15rem solid rgba(0, 0, 0, 0.1);
 }
 
+.tableBtns button {
+    padding: 0;
+    background: none;
+    outline: none;
+    border: none;
+}
+
 .tableBtns img {
     height: 1rem;
+    width: 1rem;
     cursor: pointer;
     background: #1f6fdd;
     padding: 0.7rem;
