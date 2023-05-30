@@ -159,7 +159,7 @@ input {
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1320px) {
     #header {
         flex-direction: column;
         margin-bottom: 2rem;
@@ -241,7 +241,7 @@ input {
 
 .expensesList th,
 .expensesList td {
-    padding: 1rem 2rem;
+    padding: 1rem 0.5rem;
     text-align: left;
 }
 
@@ -275,4 +275,16 @@ input {
 .tableBtns {
     display: flex;
     gap: 0.5rem;
+}
+
+@media (max-width: 1320px) {
+    .expensesList table {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .tableBtns {
+        flex-direction: column;
+    }
 }
