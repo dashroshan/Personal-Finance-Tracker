@@ -83,6 +83,7 @@ input {
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 #setBudget {
@@ -172,7 +173,6 @@ input {
         flex-direction: column;
         width: 90%;
         box-sizing: border-box;
-        margin-bottom: 2rem;
     }
 
     #separator {
@@ -218,4 +218,61 @@ input {
     #addExpense {
         width: 100%;
     }
+}
+
+.expensesList {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.expensesList table {
+    width: 79.5rem;
+    border-collapse: collapse;
+}
+
+.expensesList thead {
+    background: linear-gradient(200deg, #8ae0fa 0%, #3187ff 100%);
+    border: 0.15rem solid #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 0rem var(--mediumBlue);
+    color: white;
+}
+
+.expensesList th,
+.expensesList td {
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+.expensesList tbody>tr:nth-of-type(1)>td {
+    padding-top: 1.6rem;
+}
+
+.expensesList tbody {
+    color: black;
+    border-bottom: 0.3rem solid var(--mediumBlue);
+}
+
+.expensesList tbody>tr {
+    border-bottom: 0.15rem solid rgba(0, 0, 0, 0.1);
+}
+
+.tableBtns img {
+    height: 1rem;
+    cursor: pointer;
+    background: #1f6fdd;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    transition: 0.5s;
+    will-change: transform;
+}
+
+.tableBtns img:hover {
+    transform: scale(0.95);
+}
+
+.tableBtns {
+    display: flex;
+    gap: 0.5rem;
 }

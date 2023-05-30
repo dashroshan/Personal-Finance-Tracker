@@ -31,12 +31,12 @@
             <div id="headerCardWrap">
                 <div class="headerCard">
                     <div><img src="./assets/expenditure.svg"> Total expenses</div>
-                    <div>50000 Rs</div>
+                    <div>0 Rs</div>
                 </div>
 
                 <div class="headerCard">
                     <div><img src="./assets/budget.svg"> Remaining budget</div>
-                    <div>15000 Rs</div>
+                    <div>0 Rs</div>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
         <div id="setBudget">
             <div>Set remaining budget</div>
             <div class="inputWrap">
-                <input type="text" placeholder="00000">
+                <input type="text" placeholder="0000000">
                 <div>Cost</div>
             </div>
             <div class="buttonIcon">
@@ -68,7 +68,7 @@
                 <div>Date</div>
             </div>
             <div class="inputWrap">
-                <input type="text" placeholder="00000">
+                <input type="text" placeholder="0000000">
                 <div>Cost</div>
             </div>
             <div class="buttonIcon">
@@ -76,6 +76,52 @@
                 <span>Add</span>
             </div>
         </div>
+    </div>
+
+    <div class="expensesList">
+        <table>
+            <colgroup>
+                <col span="1" style="width: 5%;">
+                <col span="1" style="width: 12%; min-width: 10rem;">
+                <col span="1" style="width: 12%;">
+                <col span="1" style="width: 50%;">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Date</th>
+                    <th>Cost</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="tableBtns">
+                            <img src="./assets/edit.svg">
+                            <img src="./assets/delete.svg">
+                        </div>
+                    </td>
+                    <td>30 May 2023</td>
+                    <td>5000</td>
+                    <td>Smart watch</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="tableBtns">
+                            <img src="./assets/edit.svg">
+                            <img src="./assets/delete.svg">
+                        </div>
+                    </td>
+                    <td>30 May 2023</td>
+                    <td>5000</td>
+                    <td>Smart watch</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
