@@ -326,3 +326,8 @@ input {
     margin-bottom: 1.5rem;
     color: #128bd6;
 }
+
+#setBudgetError,
+#setExpenseError {
+    display: none;
+}

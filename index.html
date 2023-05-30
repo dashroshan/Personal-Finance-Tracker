@@ -46,9 +46,10 @@
         <div id="setBudget">
             <div>Set remaining budget</div>
             <div class="inputWrap">
-                <input id="remainingBudgetInput" type="text" placeholder="0000000">
+                <input id="remainingBudgetInput" type="number" placeholder="00000">
                 <div>Cost</div>
             </div>
+            <div id="setBudgetError">Invalid inputs!</div>
             <div id="btnsIconWrap">
                 <div class="buttonIcon" id="saveRemainingBudgetBtn">
                     <img src="./assets/save.svg">
@@ -74,9 +75,10 @@
                 <div>Date</div>
             </div>
             <div class="inputWrap">
-                <input type="text" placeholder="0000000" id="addExpenseCost">
+                <input type="number" placeholder="00000" id="addExpenseCost">
                 <div>Cost</div>
             </div>
+            <div id="setExpenseError">Invalid inputs!</div>
             <div class="buttonIcon" id="addExpenseBtn">
                 <img src="./assets/add.svg">
                 <span>Add</span>
@@ -88,7 +90,7 @@
         <table>
             <colgroup>
                 <col span="1" style="width: 8%;">
-                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 14.5%;">
                 <col span="1" style="width: 8%;">
                 <col span="1" style="width: 60%;">
             </colgroup>
