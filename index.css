@@ -102,7 +102,6 @@ input {
 
 .inputWrap {
     display: flex;
-    margin-bottom: 0.6rem;
 }
 
 .inputWrap div {
@@ -112,6 +111,8 @@ input {
     border-left: 0.15rem solid rgb(232, 232, 232);
     color: black;
     font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--mediumBlue);
 }
 
 .buttonIcon {
@@ -127,7 +128,6 @@ input {
     box-shadow: 0 0.3rem 0 #1f6fdd;
     border: 0.15rem solid #1f6fdd;
     transition: .3s;
-    margin-top: -0.5rem;
 }
 
 .buttonIcon img {
@@ -159,7 +159,7 @@ input {
 
 .inputWrap.left input {
     border-radius: 0 0.3rem 0.3rem 0;
-    width: 25rem;
+    width: 15rem;
 }
 
 #separator {
@@ -167,4 +167,8 @@ input {
     height: 0.15rem;
     background: rgba(255, 255, 255, 0.15);
     margin-top: 1.3rem;
+}
+
+#dateInput {
+    width: 14.9rem;
 }
