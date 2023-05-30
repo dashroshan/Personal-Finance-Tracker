@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="headerLottie">
+            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_ep1tn2ew.json" background="transparent"
+                speed="1" loop autoplay></lottie-player>
+        </div>
+        <div id="headerText">
+            <div>Hello there!</div>
+            <div>Welcome to your</div>
+            <div>Personal Finance Tracker</div>
+
+            <div id="headerCardWrap">
+                <div class="headerCard">
+                    <div><img src="./assets/expenditure.svg"> Total expenses</div>
+                    <div>50000 Rs</div>
+                </div>
+
+                <div class="headerCard">
+                    <div><img src="./assets/budget.svg"> Remaining budget</div>
+                    <div>15000 Rs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="optionsCard">
+        <div id="setBudget">
+            <div>Set remaining budget</div>
+            <div class="inputWrap">
+                <input type="text" placeholder="00000">
+                <div>Rs</div>
+            </div>
+            <div class="buttonIcon">
+                <img src="./assets/save.svg">
+                <span>Save</span>
+            </div>
+        </div>
+
+        <div id="addExpense">
+            <div>New expense</div>
+            <div class="inputWrap left">
+                <div>Title</div>
+                <input type="text" placeholder="Item spent on">
+            </div>
+            <div class="inputWrap">
+                <input type="text" placeholder="00000">
+                <div>Rs</div>
+            </div>
+            <div class="buttonIcon">
+                <img src="./assets/add.svg">
+                <span>Add</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

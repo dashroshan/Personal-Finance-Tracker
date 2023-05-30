@@ -1,0 +1,158 @@
+:root {
+    --lightBlue: #C7EBFF;
+    --mediumBlue: #438FFC;
+    --deepBlue: #18277C;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+input {
+    font-family: 'Rubik', sans-serif;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headerLottie {
+    width: 40rem;
+    margin-left: -8rem;
+}
+
+#headerText>div:nth-of-type(1) {
+    font-size: 1.5rem;
+}
+
+#headerText>div:nth-of-type(2) {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#headerText>div:nth-of-type(3) {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: -0.4rem;
+    color: var(--deepBlue);
+}
+
+#headerCardWrap {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.headerCard {
+    background: linear-gradient(200deg, #8ae0fa 0%, #3187ff 100%);
+    width: fit-content;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    color: white;
+    border: 0.15rem solid #ffffff;
+    box-shadow: 0 0.5rem 0rem var(--mediumBlue);
+}
+
+.headerCard img {
+    width: 2rem;
+    margin-right: 0.2rem;
+    margin-bottom: -0.2rem;
+}
+
+.headerCard>div:nth-of-type(2) {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0.2rem;
+}
+
+.optionsCard {
+    background: linear-gradient(200deg, #8ae0fa 0%, #3187ff 100%);
+    width: fit-content;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+    border: 0.15rem solid #ffffff;
+    box-shadow: 0 0.5rem 0rem var(--mediumBlue);
+    width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#setBudget {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    padding-bottom: 1.6rem;
+    border-bottom: 0.15rem solid rgba(255, 255, 255, 0.3);
+}
+
+
+.inputWrap input {
+    outline: none;
+    border: none;
+    border-radius: 0.3rem 0 0 0.3rem;
+    padding: 0.5rem;
+    width: 7rem;
+}
+
+.inputWrap {
+    display: flex;
+}
+
+.inputWrap div {
+    background: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+    border-left: 0.15rem solid rgb(232, 232, 232);
+    color: black;
+    font-size: 0.9rem;
+}
+
+.buttonIcon {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: white;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.3rem;
+    color: #1f6fdd;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0.3rem 0 #1f6fdd;
+    border: 0.15rem solid #1f6fdd;
+    transition: .3s;
+    margin-top: -0.5rem;
+}
+
+.buttonIcon img {
+    width: 1.2rem;
+}
+
+.buttonIcon:hover {
+    box-shadow: 0 0rem 0 #1f6fdd;
+    transform: translateY(0.25rem);
+}
+
+#addExpense {
+    margin-top: 1.8rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.inputWrap.left div {
+    border-radius: 0.3rem 0 0 0.3rem;
+    border-left: none;
+    border-right: 0.15rem solid rgb(232, 232, 232);
+}
+
+.inputWrap.left input {
+    border-radius: 0 0.3rem 0.3rem 0;
+}
