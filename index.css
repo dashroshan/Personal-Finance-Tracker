@@ -314,6 +314,14 @@ input {
     .tableBtns {
         flex-direction: column;
     }
+
+    .expensesList tr>td:nth-of-type(2) input {
+        width: 2.5rem;
+    }
+
+    .expensesList tr>td:nth-of-type(3) input {
+        width: 4rem;
+    }
 }
 
 #btnsIconWrap {
