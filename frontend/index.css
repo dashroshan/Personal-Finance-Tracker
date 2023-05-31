@@ -1,8 +1,29 @@
+/* =========================== Global variables =========================== */
+
 :root {
     --lightBlue: #C7EBFF;
     --mediumBlue: #438FFC;
     --deepBlue: #18277C;
+    --backgroundClr: white;
+    --loaderClr: #438FFC;
 }
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+input {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* ======================================================================== */
+
+
+
+
+
+/* =========================== Custom scrollbar =========================== */
 
 ::-webkit-scrollbar {
     width: 15px;
@@ -16,14 +37,189 @@
     background: #2ea5fa;
 }
 
-body {
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
+/* ======================================================================== */
+
+
+
+
+
+/* ========================== Loading screen ============================== */
+
+@keyframes loader-5-1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-input {
-    font-family: 'Rubik', sans-serif;
+@keyframes loader-5-2 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(24px, 0, 0) scale(.5);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
 }
+
+@keyframes loader-5-3 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(-24px, 0, 0) scale(.5);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-5-4 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0, 24px, 0) scale(.5);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-5-5 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0, -24px, 0) scale(.5);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+#loader_block {
+    background: var(--backgroundClr);
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 100000;
+    transition: opacity 300ms ease-in-out;
+}
+
+.loader-5 {
+    scale: 2;
+    height: 32px;
+    width: 32px;
+    animation: loader-5-1 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+
+.loader-5::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    background: var(--loaderClr);
+    border-radius: 50%;
+    animation: loader-5-2 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+
+.loader-5::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    background: var(--loaderClr);
+    border-radius: 50%;
+    animation: loader-5-3 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+
+.loader-5 span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 32px;
+    width: 32px;
+}
+
+.loader-5 span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: 0;
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    background: var(--loaderClr);
+    border-radius: 50%;
+    animation: loader-5-4 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+
+.loader-5 span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    background: var(--loaderClr);
+    border-radius: 50%;
+    animation: loader-5-5 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+
+/* ======================================================================== */
+
+
+
+
+
+
+/* ========================== Header section ============================== */
 
 #header {
     display: flex;
@@ -80,6 +276,21 @@ input {
     font-weight: bold;
     margin-top: 0.2rem;
 }
+
+#topButtonWrap {
+    display: flex;
+    margin-top: 0.75rem;
+    margin-bottom: 1.4rem;
+}
+
+/* ======================================================================== */
+
+
+
+
+
+
+/* ======================== Configuration section ========================== */
 
 .optionsCard {
     background: linear-gradient(200deg, #8ae0fa 0%, #3187ff 100%);
@@ -170,6 +381,15 @@ input {
     background: rgba(255, 255, 255, 0.2);
 }
 
+#btnsIconWrap {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#setBudgetError,
+#setExpenseError {
+    display: none;
+}
 
 @media (max-width: 1320px) {
     #header {
@@ -231,6 +451,15 @@ input {
         width: 100%;
     }
 }
+
+/* ======================================================================== */
+
+
+
+
+
+
+/* =========================== Expenses List ============================== */
 
 .expensesList {
     display: flex;
@@ -324,20 +553,19 @@ input {
     }
 }
 
-#btnsIconWrap {
-    display: flex;
-    gap: 0.5rem;
-}
+/* ======================================================================== */
+
+
+
+
+
+
+/* ========================== Footer section ============================== */
 
 #footer {
     text-align: center;
     margin-bottom: 1.5rem;
     color: #128bd6;
-}
-
-#setBudgetError,
-#setExpenseError {
-    display: none;
 }
 
 #footerBtnsWrap {
@@ -348,8 +576,4 @@ input {
     margin-bottom: 1.5rem;
 }
 
-#topButtonWrap {
-    display: flex;
-    margin-top: 0.75rem;
-    margin-bottom: 1.4rem;
-}
+/* ======================================================================== */

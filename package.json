@@ -1,0 +1,17 @@
+{
+    "name": "personal-finance-tracker",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "ISC",
+    "dependencies": {
+        "compression": "^1.7.4",
+        "connect-mongo": "^3.2.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.1.1",
+        "express": "^4.18.2",
+        "express-session": "^1.17.3",
+        "mongoose": "^5.11.14",
+        "passport": "^0.4.1",
+        "passport-google-oauth20": "^2.0.0"
+    }
+}
