@@ -148,9 +148,10 @@ const addExpenseName = document.getElementById("addExpenseName");
 const addExpenseDate = document.getElementById("addExpenseDate");
 const addExpenseCost = document.getElementById("addExpenseCost");
 
+// Set new expense default date as current day
 addExpenseDate.valueAsNumber = Date.now() - (new Date()).getTimezoneOffset() * 60000;
 
-
+// Logic for update button click in set remaining budget
 saveRemainingBudgetBtn.addEventListener("click", () => {
     if (googleAuthText.innerText === "Signin with Google") {
         handleAuthBtn();
@@ -165,11 +166,11 @@ saveRemainingBudgetBtn.addEventListener("click", () => {
         }, 1500);
         return;
     }
-
     data.remainingBudget = remainingBudgetAmount;
     dataUpdated();
 });
 
+// Logic for add button click in new expense
 addExpenseBtn.addEventListener("click", () => {
     if (googleAuthText.innerText === "Signin with Google") {
         handleAuthBtn();
