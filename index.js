@@ -148,6 +148,11 @@ function randomString(len) {
 }
 
 saveRemainingBudgetBtn.addEventListener("click", () => {
+    if (googleAuthText.innerText === "Signin with Google") {
+        GoogleLogin();
+        return;
+    }
+
     remainingBudgetAmount = parseInt(remainingBudgetInput.value, 10);
     if (remainingBudgetAmount < 0 || !remainingBudgetAmount) {
         document.getElementById("setBudgetError").style.display = "block";
@@ -175,6 +180,11 @@ backupDataBtn.addEventListener("click", () => {
 })
 
 loadBackupBtn.addEventListener("click", () => {
+    if (googleAuthText.innerText === "Signin with Google") {
+        GoogleLogin();
+        return;
+    }
+
     loadBackupUpload.click();
 })
 
@@ -185,6 +195,11 @@ loadBackupUpload.onchange = async (e) => {
 }
 
 addExpenseBtn.addEventListener("click", () => {
+    if (googleAuthText.innerText === "Signin with Google") {
+        GoogleLogin();
+        return;
+    }
+
     const itemData = {
         id: randomString(15),
         date: addExpenseDate.value,
