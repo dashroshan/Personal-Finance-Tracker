@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script type="module" src="./firebase.js" defer></script>
 </head>
 
 <body>
@@ -33,6 +34,13 @@
             <div>Hello there!</div>
             <div>Welcome to your</div>
             <div>Personal Finance Tracker</div>
+
+            <div id="topButtonWrap">
+                <div class="buttonIcon" id="googleAuthBtn">
+                    <img src="./assets/google.svg">
+                    <span>Signin with Google</span>
+                </div>
+            </div>
 
             <div id="headerCardWrap">
                 <div class="headerCard">
@@ -126,6 +134,20 @@
             <span>Reset all</span>
         </div>
     </div>
+    <!-- 
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyAcHe3XUg7sov-w1g2rcgQGQlzlFnDQA5A",
+            authDomain: "personal-finance-tracker-7b8c4.firebaseapp.com",
+            projectId: "personal-finance-tracker-7b8c4",
+            storageBucket: "personal-finance-tracker-7b8c4.appspot.com",
+            messagingSenderId: "499863185106",
+            appId: "1:499863185106:web:12370a6b86116abd34af0b"
+        };
+        const app = initializeApp(firebaseConfig);
+    </script>
+    <script type="module" src="./firebase.js" defer></script> -->
 </body>
 
 </html>
