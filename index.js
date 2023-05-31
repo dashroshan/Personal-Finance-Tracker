@@ -254,6 +254,7 @@ const openEditMode = (id) => {
 
 
 const dataUpdated = async () => {
+
     let listBodyContent = "";
     let dataItemsToList = []
 
@@ -301,7 +302,7 @@ const dataUpdated = async () => {
 
     listBody.innerHTML = listBodyContent;
 
-    if (email !== "") {
+    if (email !== "" && googleAuthText.innerText === "Signout") {
         const userObj = new User();
         await userObj.update(data);
     }
