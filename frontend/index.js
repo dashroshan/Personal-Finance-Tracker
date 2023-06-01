@@ -219,7 +219,9 @@ function updateItem(id) {
 
 // Delete the expense item with the given ID
 function deleteItem(id) {
+    const cost = data.items[id].cost;
     delete (data.items[id]);
+    data.remainingBudget += parseInt(cost, 10);
     dataUpdated();
 }
 
