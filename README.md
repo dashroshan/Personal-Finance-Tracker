@@ -3,7 +3,7 @@
 <h3 align="center">Submission to GitHub Copilot Hackathon</h3>
 
 <p align="center">
-<a href="https://personal-finance-tracker.dashroshan.com"><img src = "https://img.shields.io/badge/Visit Site-Page?style=flat&logo=alibabacloud&logoColor=white&color=2F6BFF" height = 30px></a> <a href="https://www.youtube.com"><img src = "https://img.shields.io/badge/Watch on YouTube-Page?style=flat&logo=youtube&logoColor=white&color=FE0100" height = 30px></a>
+<a href="https://personal-finance-tracker.dashroshan.com"><img src = "https://img.shields.io/badge/Visit Site-Page?style=flat&logo=alibabacloud&logoColor=white&color=2F6BFF" height = 30px></a> <a href="https://www.youtube.com/watch?v=mXf0OAtq_9U"><img src = "https://img.shields.io/badge/Watch on YouTube-Page?style=flat&logo=youtube&logoColor=white&color=FE0100" height = 30px></a>
 </p>
 
 <img src="./frontend/assets/banner.png" width="100%"/>
